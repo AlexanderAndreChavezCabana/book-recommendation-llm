@@ -55,11 +55,12 @@ Este trabajo integra conceptos de agentes inteligentes, sistemas de recomendaci�
 
 ## 🔧 Instalación
 
+
 ### 1. Clona el repositorio desde GitHub
 
 ```bash
-git clone https://github.com/tu-usuario/proyecto-alexander-chavez-cabana.git
-cd proyecto-alexander-chavez-cabana
+git clone https://github.com/AlexanderAndreChavezCabana/book-recommendation-llm.git
+cd book-recommendation-llm
 ```
 
 O descarga y descomprime el proyecto manualmente si lo prefieres.
