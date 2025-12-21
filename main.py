@@ -266,15 +266,15 @@ def retrieve_semantic_recommendations(
         book_recs = book_recs.head(final_top_k)
 
     if tone == "Happy":
-        book_recs = book_recs.sort_values(by="joy_x", ascending=False)
+        book_recs = book_recs.sort_values(by="joy", ascending=False)
     elif tone == "Surprising":
-        book_recs = book_recs.sort_values(by="surprise_x", ascending=False)
+        book_recs = book_recs.sort_values(by="surprise", ascending=False)
     elif tone == "Angry":
-        book_recs = book_recs.sort_values(by="anger_x", ascending=False)
+        book_recs = book_recs.sort_values(by="anger", ascending=False)
     elif tone == "Suspenseful":
-        book_recs = book_recs.sort_values(by="fear_x", ascending=False)
+        book_recs = book_recs.sort_values(by="fear", ascending=False)
     elif tone == "Sad":
-        book_recs = book_recs.sort_values(by="sadness_x", ascending=False)
+        book_recs = book_recs.sort_values(by="sadness", ascending=False)
 
     return book_recs
 
@@ -371,13 +371,13 @@ async def get_recommendations(request: RecommendationRequest):
                 image_url=row["large_thumbnail"],
                 category=row["simple_categories"],
                 emotions={
-                    "anger": float(row["anger_x"]),
-                    "disgust": float(row["disgust_x"]),
-                    "fear": float(row["fear_x"]),
-                    "joy": float(row["joy_x"]),
-                    "sadness": float(row["sadness_x"]),
-                    "surprise": float(row["surprise_x"]),
-                    "neutral": float(row["neutral_x"]),
+                    "anger": float(row["anger"]),
+                    "disgust": float(row["disgust"]),
+                    "fear": float(row["fear"]),
+                    "joy": float(row["joy"]),
+                    "sadness": float(row["sadness"]),
+                    "surprise": float(row["surprise"]),
+                    "neutral": float(row["neutral"]),
                 }
             )
             books_response.append(book_obj)
